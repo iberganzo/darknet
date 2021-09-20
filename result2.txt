@@ -1,0 +1,24 @@
+ CUDNN_HALF=1 
+net.optimized_memory = 0 
+mini_batch = 1, batch = 1, time_steps = 1, train = 0 
+
+ seen 64, trained: 1280 K-images (20 Kilo-batches_64) 
+
+ calculation mAP (mean average precision)...
+ Detection layer: 82 - type = 28 
+ Detection layer: 94 - type = 28 
+ Detection layer: 106 - type = 28 
+
+ detections_count = 108, unique_truth_count = 104  
+ rank = 0 of ranks = 108  rank = 100 of ranks = 108 class_id = 0, name = Tumulus, ap = 66.75%   	 (TP = 67, FP = 2) 
+
+ for conf_thresh = 0.25, precision = 0.97, recall = 0.64, F1-score = 0.77 
+ for conf_thresh = 0.25, TP = 67, FP = 2, FN = 37, average IoU = 73.78 % 
+
+ IoU threshold = 50 %, used Area-Under-Curve for each unique Recall 
+ mean average precision (mAP@0.50) = 0.667531, or 66.75 % 
+
+Set -points flag:
+ `-points 101` for MS COCO 
+ `-points 11` for PascalVOC 2007 (uncomment `difficult` in voc.data) 
+ `-points 0` (AUC) for ImageNet, PascalVOC 2010-2012, your custom dataset
